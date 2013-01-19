@@ -1,0 +1,1 @@
+INSERT INTO Users (Phone, WeChat, Email, City, RegistrationTime) Values (13438255103, 605546113, 'wenhangreg@gmail.com', 'Chengdu', '2013-01-18');

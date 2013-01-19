@@ -1,0 +1,1 @@
+INSERT INTO AirQuality (City, Time, API, Pollutant, Grade, Status) Values ('Chengdu', '2013-01-18 16:26:00', 58, 'PM2.5', 'A-', 'Healthy');

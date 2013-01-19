@@ -1,0 +1,1 @@
+CREATE TABLE AirQuality (id INT(11) NOT NULL AUTO_INCREMENT, City tinytext, Time TIMESTAMP, API INT(11), Pollutant tinytext, Grade tinytext, Status tinytext, PRIMARY KEY (id));
