@@ -9,15 +9,23 @@ function OutputSuccessRegistration(){
 }
 
 function checkSanityNumber($number) {
-	return true;
+	$RegExp='/^((\+|00)86)?(\s)*(13|15|18)[0-9]{9}$/';    
+    return preg_match($RegExp,$number)?true:false;    
 }
 
 function checkSanityEmail($email) {
-	return true;
+	$RegExp='/^[-a-zA-Z0-9_.]+@([0-9A-Za-z][0-9A-Za-z-]+\.)+[A-Za-z]{2,5}$/';    
+    return preg_match($RegExp,$email)?true:false;    
 }
 
 function checkSanityCity($city) {
-	return true;
+	$RegExp='/^[A-Za-z]+$/';    
+	return preg_match($RegExp,$city)?true:false;   
+}
+
+
+function SendFriendRequestFetion($city) {
+	
 }
 
 ?>
