@@ -12,9 +12,8 @@ $phone = (float)$_POST["phone"];
 $email = $_POST["email"];
 $wechat = (int)$_POST["wechat"];
 $city = $_POST["city"];
+$fetion_confirmed = (bool)false;
 $date = date("Y-m-d"); 
-
-var_dump($city);
 
 echo "fetching...</br>";
 
@@ -30,7 +29,10 @@ echo "regitering...";
 
 if (checkSanityNumber($phone) && checkSanityEmail($email) && checkSanityCity($city)) {
 	echo "writing";
-	$result = DB::query("INSERT INTO Users (Phone, WeChat, Email, City, RegistrationTime) Values (%d, %d, %s, %s, %s);",$phone, $wechat, $email, $city, $date);
+	$result = DB::query("INSERT INTO Users (Phone, WeChat, Email, City, Fetion_Confirmed, RegistrationTime) Values (%d, %d, %s, %s, %d, %s);",$phone, $wechat, $email, $city, $fetion_confirmed, $date);
+
+	$confirmation = SendFriendRequestFetion($phone);
+
 	OutputSuccessRegistration();
 }
 

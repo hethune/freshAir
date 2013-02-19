@@ -1,1 +1,1 @@
-CREATE TABLE Users (id INT(11) NOT NULL AUTO_INCREMENT, Phone INT(11), WeChat INT(11), Email TINYTEXT, City TINYTEXT, RegistrationTime DATE, PRIMARY KEY (id));
+CREATE TABLE Users (id INT(11) NOT NULL AUTO_INCREMENT, Phone INT(11), WeChat INT(11), Email TINYTEXT, City TINYTEXT, Fetion_Confirmed BIT(1), RegistrationTime DATE, PRIMARY KEY (id));
